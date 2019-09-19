@@ -1,0 +1,242 @@
+/*
+Theme Name: NGO Committee on UNICEF
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700,900&display=swap');
+//@import "partials/reset";
+@import "partials/colors";
+@import "partials/template"; //original theme
+@import "partials/loader";
+@import "partials/header";
+@import "partials/nav";
+@import "partials/menu";
+@import "partials/main";
+@import "partials/hero";
+@import "partials/sidebar";
+@import "partials/media";
+@import "partials/slick";
+body {
+    font: 400 1.5em/1.8 "Rubik", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+h1 {
+    font-weight: 900;
+    color: $blue;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 150%;
+    color: $blue;
+    margin-top:70px;
+    border-bottom: 2px dashed $blue;
+   
+}
+
+h3 {
+    font-weight: 700;
+    color: $gray;
+
+    
+    font-size: 120%;
+}
+h4 {
+    font-weight: 700;
+    color: $gray;
+
+    
+    font-size: 110%;
+}
+.event{
+    border-bottom:1px dashed $gray;
+    padding-bottom:2em; 
+}
+.panel-group {
+    margin-bottom: 0px;
+    border-color: none;
+}
+
+.panel-title {
+    font-size: 1em;
+}
+
+.panel-default {
+    border-color: none;
+    border-radius: 25px !important;
+}
+
+.session-time,
+.mobile-sesion.time {
+    float: right;
+    margin-right: 2em;
+    margin-top: -17px;
+    text-transform: none;
+    color: #fff !important;
+    @media(max-width: 767px) {
+        display: none;
+    }
+}
+
+.mobile-session-time {
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+    font-weight: 900;
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+
+.module {
+    padding-top: 70px;
+}
+
+.bg-dark {
+    background: linear-gradient(to top, $dark_blue 0%, $blue 51%, $unicef_blue 100%);
+}
+
+.bg-dark-reverse {
+    background: linear-gradient(to bottom, $dark_blue 0%, $blue 51%, $unicef_blue 100%);
+    color: #eee;
+}
+
+.panel-default>.panel-heading {
+    color: #ccc;
+    padding: 2em;
+    font-size: 150%;
+    //  background: linear-gradient(to top, #8c002e 0%,#a90329 51%,#c40327 100%);
+    //border-color: #8c002e;
+    h4 a,
+    h4 a.collapsed {
+        color: #fff !important;
+    }
+    .speaker-name {
+        color: #ccc;
+    }
+    a {
+        display: inline;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-color: #8c002e;
+}
+
+.panel-body {
+    p {
+        font-size: 120%;
+        padding-right: 20px;
+        @media(max-width: 1280px) {
+            clear: left;
+        }
+    }
+}
+
+.session-sponsors {
+    display: table;
+    padding-left: 1%;
+    width: 100%;
+}
+
+.session-sponsor {
+    display: table-cell;
+    width: 20%;
+    padding-right: 1%;
+    text-align: center;
+    img {
+        border-radius: 50%;
+    }
+}
+
+a.cta {
+    text-align: center;
+    margin: 3em auto 1em;
+    color: #fff;
+    font-weight: 900;
+    display: block;
+    display: block;
+    background-size: cover;
+    line-height: 150%;
+    transition: all .2s ease-in-out;
+}
+
+a.register {
+    background: url(/wp-content/uploads/2018/10/blue-aqua.png) center center no-repeat;
+    width: 303px;
+    height: 199px;
+    padding: 2em 0px;
+    font-size: 200%;
+}
+
+a.sponsor {
+    background: url(/wp-content/uploads/2018/10/red-pink.png) center center no-repeat;
+    width: 539px;
+    height: 387px;
+    padding: 9em 1em 0px;
+    font-size: 150%;
+    max-width: 100%;
+    span {
+        font-size: 150%;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 0.5em;
+    }
+}
+
+a.cta:hover {
+    transform: scale(1.5);
+}
+
+.section-foot {
+    margin: 50px 0px;
+}
+
+.footer-widgets {
+    h5 {
+        color: #fff;
+    }
+    label {
+        font-weight: 400;
+    }
+    h6 {
+        font-style: italic;
+        a {
+            color: #ff0;
+        }
+    }
+    input {
+        max-width: 100%;
+        color: #000;
+        padding: 3px;
+    }
+    .wpcf7-submit {
+        color: $dark_blue;
+        text-align: center;
+        width: 50px;
+        border-radius: 5px;
+        border: 1px solid $gray;
+        margin: 0px auto;
+    }
+    div.wpcf7-mail-sent-ok {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+    }
+}
+
+.hero {
+    margin-top: 37px;
+}
+
+.interior {
+    background: $light_gray;
+    .row {
+        background-color: #fff;
+        border-radius: 15px;
+    }
+}

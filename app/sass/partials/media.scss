@@ -1,0 +1,54 @@
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+
+    height: 0;
+    background: #f00;
+
+    iframe {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.featured {
+    
+    .featured-wrap {
+        position: relative;
+        img{
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        .credit {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding:3px 5px;
+            border-top-left-radius: 5px;
+            font-size:80%;
+        }
+       
+    }
+
+     .img-title {
+         font-weight: 700;
+     }
+     .caption{
+         padding:10px 20px 5px;
+          background:#f7f7f7;
+     }
+      p{
+         font-style:italic;
+        font-size:80%;
+     }
+   
+}
+.section-thumbnail{
+    @media(min-width:768px){
+        padding-top:30px;
+    }
+}

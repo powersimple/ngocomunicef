@@ -1,0 +1,20 @@
+$dark_gray:#525656;
+$gray : #75767A;
+$light_gray:#ccc;
+$dark_blue: #105F7E;
+$blue: #005e92;
+$unicef_blue:#1CABE2;
+$content_bg:#fff;
+.gray{
+    background: $light_gray;
+
+
+}
+.blue{
+    background: $blue;
+    h2, a, p{
+        color:#fff;
+
+    }
+
+}
