@@ -1,5 +1,5 @@
-//var localhost = 'http://ngocomunicef.192.168.1.11.xip.io:8907'
-var localhost = 'http://ngocomunicef.192.168.1.14.xip.io:8907'
+var localhost = 'http://ngocomunicef.192.168.1.11.xip.io:8907'
+    //var localhost = 'http://ngocomunicef.192.168.1.14.xip.io:8907'
 
 let gulp = require('gulp'),
     babel = require('gulp-babel'),

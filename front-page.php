@@ -63,7 +63,7 @@ foreach($pages as $key => $value){
 
 
  
-
+if(@$excerpt != ''){
   
 
   ?>
@@ -111,6 +111,7 @@ foreach($pages as $key => $value){
           </div>
           </section>
            <?php
+          }
           }
           ?>
        

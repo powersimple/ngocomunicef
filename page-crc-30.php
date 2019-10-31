@@ -13,6 +13,7 @@
     }
      $slides = get_slides($post->ID);
    // var_dump($slides);
+  
 ?>
 <main class="main">
 <section class="module interior">
@@ -20,7 +21,7 @@
    
     <div class="slider slideshow">
     <?php
-   
+    if(count($slides)){
     foreach ($slides as $key => $media_id) {
        $src= wp_get_attachment_image_src( $media_id,"Full");
        //var_dump($src);//var_dump(get_media_data($media_id));
@@ -32,6 +33,7 @@
         </div>
         <?php
             }
+        }
           ?>
         
 

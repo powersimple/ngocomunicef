@@ -810,10 +810,12 @@ function eventMeta( $meta_boxes ) {
 				'type' => 'select',
 				'placeholder' => esc_html__( 'Select an Item', 'metabox-online-generator' ),
 				'options' => array(
-					'Symposium' => 'Symposium',
-					'Neetup' => 'Meetup',
+					'Side Event' => 'Side Event',
+					'Meeting' => 'Meeting',
+					'Briefing' => 'Brieifng',					
 					'Conference' => 'Conference',
 					'International Day' => 'International Day',
+
 					
 				),
 			),
