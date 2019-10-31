@@ -796,6 +796,7 @@ add_filter( 'rwmb_meta_boxes', 'getProperties' );
 function eventMeta( $meta_boxes ) {
 	$prefix = '';
 
+	
 	$meta_boxes[] = array(
 		'id' => 'sdg',
 		'title' => esc_html__( 'Event Data', 'metabox-online-generator' ),
