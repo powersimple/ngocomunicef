@@ -267,6 +267,7 @@ function get_home_children(){
 		}
 
 		function dynamicSubnav(){
+			
 			global $post;
 			global $wpdb;
 			$sql = '';
@@ -327,7 +328,7 @@ $sql = "select ID, post_title from wp_posts where post_status = 'publish' and po
 							$parent = $post->post_parent;
 							$parent_link = get_permalink( $post->post_parent);
 							$title = $wpdb->get_var("select post_title from wp_posts where ID = $post->post_parent");
-							 $sql = "select ID, post_title from wp_posts where post_status = 'publish' and post_type='$post->post_type' and post_parent = $parent";
+							 $sql = "select ID, post_title from wp_posts where post_status = 'publish' and post_type='$post->post_type' and post_parent = $parent order by menu_order";
 						}
 					}
 				}

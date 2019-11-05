@@ -17,28 +17,7 @@
 ?>
 <main class="main">
 <section class="module interior">
-<div class="gallery-wrap">
-   
-    <div class="slider slideshow">
-    <?php
-    if(count($slides)){
-    foreach ($slides as $key => $media_id) {
-       $src= wp_get_attachment_image_src( $media_id,"Full");
-       //var_dump($src);//var_dump(get_media_data($media_id));
 
-        //extract((array) get_media_data($media_id));
-        ?>
-        <div>
-            <img src="<?php echo $src[0];?>" alt="National Black Theatre">
-        </div>
-        <?php
-            }
-        }
-          ?>
-        
-
-    </div>
-</div>
 
  <div class="container">
     <div class="row">
@@ -68,10 +47,11 @@ echo the_content()
                     <div class="section-thumbnail col-xs-6 col-sm-4"> 
                       
                       <?php
-                        displayFeaturedImage();
                         parentSubNav();
                         dynamic_sidebar('page-sidebar');
-                        ?>
+                      displayFeaturedImage();
+
+?>
                     </div>
                     
                     
@@ -86,6 +66,35 @@ echo the_content()
                 
                
         </div>
+
+        <div class="gallery-wrap">
+   <h3 id="slide-title">1924</h3>
+   
+    <div class="slider slideshow">
+    <?php
+    if(count($slides)){
+    foreach ($slides as $key => $media_id) {
+       $src= wp_get_attachment_image_src( $media_id,"Full");
+       $meta = get_media_data($media_id);
+    //    var_dump(get_media_data($media_id));
+
+        //extract((array) get_media_data($media_id));
+        ?>
+        <div>
+            <img id="crc<?=$key?>" src="<?php echo $src[0];?>" title="<?=$meta['title'];?>" data-desc="<?=$meta['desc'];?>" data-caption="<?=$meta['caption'];?>" alt="<?=$meta['alt'];?>">
+        </div>
+        <?php
+            }
+        }
+          ?>
+        
+
+    </div>
+   <div id="slide-desc"></div>
+   
+    <div id="slide-caption"></div>
+
+</div>
     </section>
 </main>
 <?php

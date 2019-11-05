@@ -1,32 +1,30 @@
-#gallery{
-    padding:75px 0px;
+#gallery {
+    padding: 75px 0px;
     position: relative;
-    .skyline{
+    .skyline {
         position: absolute;
-        right:10%;
+        right: 10%;
         bottom: -20px;
-        width:20%;
-        max-width:250px;
-
-        img{
-           
-        }
+        width: 20%;
+        max-width: 250px;
+        img {}
     }
     z-index: 100;
     position: relative;
+}
 
-}
-.gallery-wrap{
-    width:80%;
+.gallery-wrap {
+    width: 80%;
     margin: 2em auto;
-    @media(max-width:767px) {
-        width:auto;
+    @media(max-width: 767px) {
+        width: auto;
     }
-    .slider{
-            max-width: 1240px;
-            margin: 0px auto;
+    .slider {
+        max-width: 1240px;
+        margin: 0px auto;
     }
 }
+
 .slick-prev,
 .slick-next {
     font-size: 1em;
@@ -40,7 +38,6 @@
     margin-top: -10px;
     padding: 0;
     cursor: pointer;
-    
     border: none;
     outline: none;
     border-radius: 50%;
@@ -56,6 +53,7 @@
     right: 0;
     content: ">";
 }
+
 .slick-dots {
     position: relative;
     bottom: 0px;
@@ -86,12 +84,15 @@
         background: #522b1c;
     }
 }
+
 #home-slideshow {
     .slick-prev,
     .slick-next {
         top: 45%;
     }
 }
+
+
 /* Slider */
 
 .slick-slider {
@@ -108,22 +109,22 @@
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
 }
+
 .slick-list {
     position: relative;
     overflow: hidden;
     display: block;
     margin: 0;
     padding: 0;
-
     &:focus {
         outline: none;
     }
-
     &.dragging {
         cursor: pointer;
         cursor: hand;
     }
 }
+
 .slick-slider .slick-track,
 .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
@@ -140,21 +141,19 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
     &:before,
     &:after {
         content: "";
         display: table;
     }
-
     &:after {
         clear: both;
     }
-
     .slick-loading & {
         visibility: hidden;
     }
 }
+
 .slick-slide {
     float: left;
     height: 100%;
@@ -168,27 +167,36 @@
     &.slick-loading img {
         display: none;
     }
-
     display: none;
-
     &.dragging img {
         pointer-events: none;
     }
-
     .slick-initialized & {
         display: block;
     }
-
     .slick-loading & {
         visibility: hidden;
     }
-
     .slick-vertical & {
         display: block;
         height: auto;
         border: 1px solid transparent;
     }
 }
+
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+h3#slide-title {
+    font-size: 300%;
+    font-family: "Times New Roman", serif;
+    color: #94bc4d;
+    font-style: italic;
+}
+
+h3#slide-caption {
+    font-size: 300%;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
 }

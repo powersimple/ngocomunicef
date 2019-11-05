@@ -22,7 +22,7 @@ function selectScreenImage( $meta_boxes ) {
 				'name' => esc_html__( 'Slides', 'metabox-online-generator' ),
 				'desc' => esc_html__( 'Appears in header if home page', 'metabox-online-generator' ),
 				'force_delete' => false,
-				'max_file_uploads' => '10',
+				'max_file_uploads' => '20',
 				'options' => array(),
 				'attributes' => array(),
 			),

@@ -108,27 +108,16 @@ if($this_url != ""){
 	 <?php
 	} else {?>
 	<span class="event-title" title="<?=$title?>"><?=$title?></span>
+		
+
 	<?php 
 
 	} 
-	if($img != ""){
-		if($this_url != ""){
-			
-     ?><a href="<?=$this_url?>" <?=$this_target?> title="<?=$title?>"><?php } ?><img src="<?=$img?>" alt="<?=$title?>"><?php
-		if($img != ""){
-     ?></a><?php } else {?><img src="<?=$img?>" alt="<?=$title?>"><?php } 
-	}
+	
 	?>
 	</h4>
-	<p>
-		<?=$content?>
-</p>	 
-		
-
-		</div>
-		 
-		<div class="event-date">
-			<?
+	<div class="event-date">
+			<?php
 			print date("l, j F Y", $event_date_start);
 			if($event_date_end != '' && $event_data_end != $event_date_start){
 				print " - ".date("l, j F Y", $event_date_end);
@@ -140,7 +129,23 @@ if($this_url != ""){
 			if($end_time != ''){
 				print " - ". date("g:i a", strtotime($end_time));
 			}			
-?></div>
+?><BR></div>
+<?php
+if($img != ""){
+		if($this_url != ""){
+			
+     ?><a href="<?=$this_url?>" <?=$this_target?> title="<?=$title?>"><?php } ?><img src="<?=$img?>" alt="<?=$title?>"><?php
+		if($img != ""){
+     ?></a><?php } else {?><img src="<?=$img?>" alt="<?=$title?>"><?php } 
+	}
+?>
+	<p>
+		<?=$content?>
+</p>	 
+		
+
+		</div>
+		 
 	<?=showField($event_location,"Location")?>
 	<?=showField($event_address,"Address")?>
 	<?=showField($event_directions,"Directions")?>
@@ -215,6 +220,9 @@ function display_events(){
     </div>
 	<?php
 	} //count of upcoming events > 0
+
+	if(count($data['past_events'])){
+
 	?>
     
     <div class="event-group" id="past-events">
@@ -231,7 +239,8 @@ function display_events(){
 	
     
 	<?php
+	}//past events
 	
-	return ob_get_clean();
+	//return ob_get_clean();
 }
 ?>

@@ -23,7 +23,7 @@ require_once("functions/metadata.php");
 	require_once("functions/media.php");
 
 require_once("functions/profiles.php");
-	require_once("functions/events.php");
+//	require_once("functions/events.php");
 require_once("functions/speakers.php");
 	  require_once("functions/members.php");
 
